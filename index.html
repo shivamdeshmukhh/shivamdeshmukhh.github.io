@@ -7,31 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <audio id="bg-music" loop>
-        <source src="./play1.mp3" type="audio/mpeg">
-    </audio>
-
     <div class="header">
-        <h1>🎂 Happy Birthday My Love...❤️</h1>
-        <button id="toggle-mode">🌙 Toggle Dark Mode</button>
+        <h1>🎂 Happy Birthday My Love ❤️</h1>
+        <button id="toggle-mode">🌙 Toggle Theme</button>
     </div>
 
     <div class="controls">
-        <label for="brightness">Brightness:</label>
-        <input type="range" id="brightness" min="0.3" max="1.5" step="0.1" value="1">
-
-        <label for="blur">Blur Effect:</label>
-        <input type="range" id="blur" min="0" max="5" step="0.1" value="0">
+        <div class="slider-group">
+            <label for="brightness">✨ Brightness</label>
+            <input type="range" id="brightness" min="0.3" max="1.5" step="0.1" value="1">
+        </div>
+        <div class="slider-group">
+            <label for="blur">🌫️ Blur</label>
+            <input type="range" id="blur" min="0" max="5" step="0.1" value="0">
+        </div>
     </div>
 
     <div class="gallery">
         <img src="1.jpg" class="draggable" alt="Photo 1">
+        <img src="2.jpg" class="draggable" alt="Photo 2">
+        <img src="3.jpg" class="draggable" alt="Photo 3">
+        <img src="4.jpg" class="draggable" alt="Photo 4">
+        <img src="5.jpg" class="draggable" alt="Photo 5">
+        <img src="6.jpg" class="draggable" alt="Photo 6">
+        <img src="7.jpg" class="draggable" alt="Photo 7">
+        <img src="8.jpg" class="draggable" alt="Photo 8">
+        <img src="9.jpg" class="draggable" alt="Photo 9">
+        <img src="10.JPG" class="draggable" alt="Photo 10">
+        <img src="11.jpg" class="draggable" alt="Photo 11">
+        <img src="12.JPG" class="draggable" alt="Photo 12">
+        <img src="13.jpg" class="draggable" alt="Photo 13">
+        <img src="14.jpg" class="draggable" alt="Photo 14">
+        <img src="15.jpg" class="draggable" alt="Photo 15">
+        <img src="16.JPG" class="draggable" alt="Photo 16">
+        <img src="17.JPG" class="draggable" alt="Photo 17">
+        <img src="18.JPG" class="draggable" alt="Photo 18">
+        <img src="19.JPG" class="draggable" alt="Photo 19">
+        <img src="20.jpg" class="draggable" alt="Photo 20">
     </div>
 
     <div id="message">
-        <h2>💖 Happy Birthday, Meri Jann ! 💖</h2>
-        <p>You mean everything to me and I am so grateful to have you in my life. I hope your birthday is as wonderful as you are! 🎉🎁</p>
-        <button id="close-message">Close</button>
+        <h2>Happy Birthday! 💝</h2>
+        <p>You make every day special! 🎉</p>
     </div>
 
     <script src="script.js"></script>

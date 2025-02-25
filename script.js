@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Audio setup
+    const bgMusic = document.getElementById("bg-music");
+    
+    // Try to play audio immediately
+    bgMusic.play().catch(() => {
+        // If autoplay was prevented, add click listener
+        document.addEventListener('click', () => {
+            bgMusic.play();
+        }, { once: true });
+    });
+
+    // Keep track of audio state when tab visibility changes
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+            bgMusic.pause();
+        } else {
+            bgMusic.play();
+        }
+    });
+
     const images = document.querySelectorAll(".draggable");
     let activeImage = null;
     let initialX, initialY;

@@ -104,4 +104,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize
     distributeImages();
     window.addEventListener("resize", distributeImages);
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤";
+        document.body.appendChild(heart);
+
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.top = `${Math.random() * 100}vh`;
+        heart.style.fontSize = `${Math.random() * 25 + 15}px`;
+
+        setTimeout(() => heart.remove(), 5000);
+    }, 500);
 });

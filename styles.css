@@ -1,0 +1,134 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s infinite alternate ease-in-out;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 3px 3px 6px #333;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #ff6b81;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+}
+
+.controls {
+    margin: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin: 10px;
+}
+
+/* Floating Hearts Animation */
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 20px;
+    animation: floatUp 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Draggable Images */
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 70vh;  /* Reduced height to move images up */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -50px; /* Moves images slightly upward */
+}
+
+.draggable {
+    width: 250px;  /* Increased size */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+    position: absolute;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease;
+    touch-action: none;
+}
+
+.draggable:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        height: 60vh;  /* Further adjusting height for mobile */
+        margin-top: -80px;  /* Moving up more for mobile */
+    }
+
+    .draggable {
+        width: 200px;  /* Larger size for mobile */
+        height: 200px;
+    }
+}
+
+
+/* Birthday Message */
+#message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 50%;
+}
+
+.dark-mode {
+    background: #222;
+    color: white;
+}
